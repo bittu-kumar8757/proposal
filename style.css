@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ffd1dc, #e8d7ff);
+  z-index: -1;
+}
+
+.card {
+  width: 520px;
+  background: white;
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(255,105,180,0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+h2 {
+  color: #ff3f81;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 220px;
+  border-radius: 25px;
+  margin: 20px 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.yes {
+  background: linear-gradient(135deg, #ff4d8d, #ff7ab6);
+  color: white;
+}
+
+.no {
+  background: #eee;
+}
+
+button.yes:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 20px rgba(255,80,140,0.9);
+}
+
+button.no:hover {
+  transform: translateX(12px) rotate(5deg);
+}
+
+.big {
+  margin-top: 20px;
+  width: 80%;
+}
+
+/* Gift animation */
+.gift {
+  font-size: 90px;
+  margin: 30px 0;
+  animation: shake 1.2s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(6deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Contract slide */
+.contract {
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 0 50px rgba(255,80,140,0.7);
+}
+
+.contract h2 {
+  color: #ff5fa2;
+  text-shadow: 0 0 10px #ff5fa2;
+}
+
+.contract ul {
+  list-style: none;
+  text-align: left;
+  margin: 25px 0;
+}
+
+.contract ul li {
+  color: white;
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+.agree-btn {
+  margin-top: 15px;
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d8d, #ff7ab6);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,80,140,0.8);
+}
+
+.agree-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 🎵 Music Side Panel */
+/* Small cute music button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 182, 193, 0.9);
+  backdrop-filter: blur(8px);
+
+  /* 👇 CENTER FIX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  line-height: 1;   /* 👈 ye bhi important */
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 28px rgba(255, 105, 180, 0.6);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .music-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* last sloide */
+
+.personal-line {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.personal-line .name {
+  color: #ff4d8d;
+  font-weight: 600;
+}
+
+
+.final-moment {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+  z-index: 1000;
+}
+
+.final-moment h2 {
+  color: #ff9ecf;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.hearts::before,
+.hearts::after {
+  content: "💖";
+  position: fixed;
+  bottom: 0;
+  font-size: 20px;
+  opacity: 0.4;
+  animation: floatUp 6s infinite;
+}
+
+.hearts::after {
+  left: 60%;
+  animation-delay: 3s;
+}
+
+.hearts::before {
+  left: 40%;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+.screenshot-text {
+  font-size: 13px;
+  color: #ffc1dd;
+  margin-top: 12px;
+}
+
+
+
+.romantic-line {
+  margin: 10px 0 18px;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}

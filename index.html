@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <h2> Hey Aditi 💖</h2>
+    <p class="personal-line">Ever since I met you ,  everything feels a more special 💗</p>
+    <img src="images.jpg">
+    <div class="btns">
+      <button class="yes" onclick="nextSlide()">Yes 💕</button>
+      <button class="no">No 😏</button>
+    </div>
+  </div>
+
+<!-- Slide 2 -->
+<div class="slide">
+  <h2>With you… 💫</h2>
+
+  <p class="romantic-line">
+    Even ordinary moments with you feel relaxing—and I love that feeling. Do you feel the same way?
+  </p>
+
+  <img src="images (1).jpg">
+
+  <div class="btns">
+    <button class="yes" onclick="nextSlide()">Yes 💖</button>
+    <button class="no">No 😜</button>
+  </div>
+</div>
+
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <h2>Here a surprise for you 💝</h2>
+    <div class="gift">🎁</div>
+    <button class="yes big" onclick="nextSlide()">Open 💗</button>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide">
+    <h2>Let's go for a date! 💖</h2>
+    <p>Pick our special day 💕</p>
+    <input type="date">
+    <button class="yes big" onclick="nextSlide()">Let's Make This Special 💞</button>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide">
+    <h2>I'm already excited... 💘</h2>
+    <p>Our special day will be magical ✨</p>
+    <button class="yes big" onclick="goToContract()">Let's go for a date 💖</button>
+  </div>
+
+  <!-- Slide 6 : Contract -->
+  <div class="slide contract" id="contractSlide">
+    <h2>Hamari Chhoti-si Date Contract 💕</h2>
+
+    <ul>
+      <li>💌 Tum late nahi aaogi 🥺💗</li>
+      <li>💌 Hame ek privacy chahiye 🤍</li>
+      <li>💌 Tum mujhe itna pyaar karna, 
+              jitna aaj tak mujhe kisi ne nahi kiya 💖 </li>
+      <li>💌 Aur… smile zaroor rakhna 😘</li>
+      <li>💌 Ek selfie pakki end me 📸💖</li>
+    </ul>
+
+   <button class="agree-btn" onclick="playSong()">I Agree 💞</button>
+    <p class="screenshot-text">📸 Screenshot this moment… I want to remember it forever.</p>
+
+
+     <div id="finalMoment" class="final-moment">
+  <h2>This moment is mine forever 💫</h2>
+  <p>Thank you for choosing me ❤️</p>
+</div>
+  </div>
+
+ 
+
+
+</div>
+
+<!-- 🎵 Music Side Panel -->
+<!-- Small Music Button -->
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<audio id="loveSong">
+  <source src="Pehla Pyar Tu Mera Tu Hi Aakhri - SamWep.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+<div class="hearts"></div>
+
+</body>
+</html>
